@@ -1,0 +1,8 @@
+{
+  "type": "sqlite",
+  "host": "localhost",
+  "port": 5432,
+  "database": "ai_app.db",
+  "username": "",
+  "password": ""
+}

@@ -1,0 +1,109 @@
+celery:
+  broker_url: redis://localhost:6379/1
+  result_backend: redis://localhost:6379/2
+cors:
+  origins:
+  - http://localhost:4396
+  - http://127.0.0.1:4396
+database:
+  echo: false
+  url: sqlite+aiosqlite:///./ai_app.db
+default_llm_provider: anthropic
+llm:
+  api_key: your-anthropic-api-key
+  base_url: https://api.anthropic.com
+  max_tokens: 8192
+  model: claude-3-opus-20240229
+  provider: anthropic
+  temperature: 0.7
+llm_providers:
+  anthropic:
+    api_key: your-anthropic-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.anthropic.com
+    deployment_name: ''
+    endpoint: https://api.anthropic.com
+    max_tokens: 8192
+    model: claude-3-opus-20240229
+    temperature: 0.7
+  azure:
+    api_key: your-azure-openai-api-key
+    api_version: 2024-02-15-preview
+    deployment_name: your-deployment-name
+    endpoint: your-azure-endpoint
+    max_tokens: 4000
+    temperature: 0.7
+  deepseek:
+    api_key: your-deepseek-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.deepseek.com
+    deployment_name: ''
+    endpoint: https://api.deepseek.com
+    max_tokens: 4000
+    model: deepseek-chat
+    temperature: 0.7
+  gemini:
+    api_key: your-google-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://generativelanguage.googleapis.com
+    deployment_name: ''
+    endpoint: https://generativelanguage.googleapis.com
+    max_tokens: 4096
+    model: gemini-2.0-flash-exp
+    temperature: 0.7
+  gpt:
+    api_key: your-openai-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.openai.com/v1
+    deployment_name: ''
+    endpoint: https://api.openai.com/v1
+    max_tokens: 4000
+    model: gpt-4
+    temperature: 0.7
+  ollama:
+    api_key: ''
+    api_version: 2024-02-15-preview
+    base_url: http://localhost:11434
+    deployment_name: ''
+    endpoint: http://localhost:11434
+    max_tokens: 4000
+    model: llama2
+    temperature: 0.7
+  openai:
+    api_key: ''
+    base_url: https://api.openai.com/v1
+    max_tokens: 4000
+    model: ''
+    temperature: 0.7
+logging:
+  file: logs/backend.log
+  level: INFO
+redis:
+  url: redis://localhost:6379/0
+security:
+  access_token_expire_minutes: 30
+  algorithm: HS256
+  secret_key: your-secret-key-change-in-production
+server:
+  debug: true
+  host: 0.0.0.0
+  port: 8000
+services:
+  agent_core:
+    timeout: 120
+    url: http://localhost:8001
+  api_doc_generator:
+    timeout: 60
+    url: http://localhost:8005
+  chart_generator:
+    timeout: 60
+    url: http://localhost:8003
+  ppt_generator:
+    timeout: 60
+    url: http://localhost:8002
+  schedule_reminder:
+    timeout: 30
+    url: http://localhost:8004
+upload:
+  directory: ./uploads
+  max_file_size: 10485760

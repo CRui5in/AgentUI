@@ -1,0 +1,7 @@
+{
+  "backend_url": "http://localhost:8000",
+  "agent_url": "http://localhost:8001",
+  "ppt_service_url": "http://localhost:8002",
+  "chart_service_url": "http://localhost:8003",
+  "timeout": 30000
+}

@@ -1,0 +1,95 @@
+backend:
+  url: http://localhost:8000
+default_llm_provider: anthropic
+llm_providers:
+  anthropic:
+    api_key: your-anthropic-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.anthropic.com
+    deployment_name: ''
+    endpoint: https://api.anthropic.com
+    max_tokens: 8192
+    model: claude-sonnet-4-20250514
+    temperature: 0.7
+  azure:
+    api_key: your-azure-openai-api-key
+    api_version: 2024-02-15-preview
+    deployment_name: your-deployment-name
+    endpoint: your-azure-endpoint
+    max_tokens: 4000
+    temperature: 0.7
+  deepseek:
+    api_key: your-deepseek-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.deepseek.com
+    deployment_name: ''
+    endpoint: https://api.deepseek.com
+    max_tokens: 4000
+    model: deepseek-chat
+    temperature: 0.7
+  gemini:
+    api_key: your-google-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://generativelanguage.googleapis.com
+    deployment_name: ''
+    endpoint: https://generativelanguage.googleapis.com
+    max_tokens: 4096
+    model: gemini-2.5-flash-preview-05-20
+    temperature: 0.7
+  gpt:
+    api_key: your-openai-api-key
+    api_version: 2024-02-15-preview
+    base_url: https://api.openai.com/v1
+    deployment_name: ''
+    endpoint: https://api.openai.com/v1
+    max_tokens: 4000
+    model: gpt-4.1
+    temperature: 0.7
+  ollama:
+    api_key: ''
+    api_version: 2024-02-15-preview
+    base_url: http://localhost:11434
+    deployment_name: ''
+    endpoint: http://localhost:11434
+    max_tokens: 4000
+    model: llama2
+    temperature: 0.7
+  openai:
+    api_key: ''
+    base_url: https://api.openai.com/v1
+    max_tokens: 4000
+    model: ''
+    temperature: 0.7
+logging:
+  file: logs/agent.log
+  level: INFO
+mcp_services:
+  api_doc_generator:
+    enabled: true
+    host: localhost
+    port: 8005
+  chart_generator:
+    enabled: true
+    host: localhost
+    port: 8003
+  ppt_generator:
+    enabled: true
+    host: localhost
+    port: 8002
+  schedule_reminder:
+    enabled: true
+    host: localhost
+    port: 8004
+openai:
+  api_key: your-openai-api-key
+  base_url: https://api.openai.com/v1
+  model: gpt-4
+security:
+  allowed_hosts:
+  - localhost
+  - 127.0.0.1
+  secret_key: your_secret_key_here
+server:
+  debug: true
+  host: 0.0.0.0
+  port: 8001

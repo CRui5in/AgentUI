@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "ppt-generator-service"
+version = "1.0.0"
+description = "LaTeX Beamer PPT 生成器 MCP 服务"
+authors = ["AI App Team"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+pylatex = "^1.4.1"
+jinja2 = "^3.1.2"
+python-dotenv = "^1.0.0"
+loguru = "^0.7.2"
+aiofiles = "^23.2.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+black = "^23.11.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88 
