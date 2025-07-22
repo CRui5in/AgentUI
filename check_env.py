@@ -82,8 +82,7 @@ def check_project_structure():
         "backend",
         "frontend", 
         "agent_core",
-        "tool_services",
-        "desktop"
+        "tool_services"
     ]
     
     all_exist = True
@@ -105,8 +104,7 @@ def check_config_files():
         "agent_core/pyproject.toml",
         "tool_services/ppt_generator_service/pyproject.toml",
         "tool_services/chart_generator_service/pyproject.toml",
-        "frontend/package.json",
-        "desktop/package.json"
+        "frontend/package.json"
     ]
     
     all_exist = True

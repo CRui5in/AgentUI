@@ -11,6 +11,12 @@
 - ⚙️ **配置管理**：统一的配置管理和状态监控
 - 🔌 **RESTful API**：完整的 API 接口和文档
 
+![仪表盘](screenshot/dashboard.png)
+![PPT生成器](screenshot/ppt_generator.png)
+![图表生成器](screenshot/chart_generator.png)
+![设置](screenshot/setting.png)
+![原神](screenshot/ppt_example.png)
+
 ## 🏛️ 系统架构
 
 ```
